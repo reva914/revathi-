@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>EduGenie: Google Gemini Powered Learning Assistant</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <h1>🧞 EduGenie</h1>
+    <p class="subtitle">Google Gemini Powered Learning Assistant</p>
+  </header>
+
+  <main class="card">
+    <form id="edugenie-form">
+      <label for="task">Choose a task:</label>
+      <select id="task" name="task">
+        <option value="qa">Ask a Question (Q&amp;A)</option>
+        <option value="explain">Get an Explanation</option>
+        <option value="quiz">Generate a Quiz</option>
+        <option value="summarize">Summarize Content</option>
+        <option value="learn">Get a Learning Path</option>
+      </select>
+
+      <label for="user-input" id="input-label">Your question:</label>
+      <textarea id="user-input" name="user-input" rows="5"
+        placeholder="e.g. Which is the largest ocean?"></textarea>
+
+      <button type="submit" id="submit-btn">Submit</button>
+    </form>
+
+    <div id="loading" class="loading hidden">Thinking...</div>
+    <div id="result-area" class="result-area"></div>
+  </main>
+
+  <footer>
+    <p>Powered by Gemini 1.5 Pro &amp; LaMini-Flan-T5-783M</p>
+  </footer>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
